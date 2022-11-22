@@ -7,21 +7,21 @@
       <th>
         Image
       </th>
-      <th (click)="sortBy('title',0)">
-        Title
+      <th>
+        Title <img (click)="sortBy('title',0)" height=10 src="assets/sort-27.svg">
       </th>
-      <th (click)="sortBy('PublishDate',0)">
-        Publish Date
+      <th>
+        Publish Date <img (click)="sortBy('PublishDate',0)" height=10 src="assets/sort-27.svg">
       </th>
       <ng-container *ngIf="!isMobile">
         <th>
           Image
         </th>
-        <th (click)="sortBy('title',1)">
-          Title
+        <th>
+          Title <img (click)="sortBy('title',1)" height=10 src="assets/sort-27.svg">
         </th>
-        <th (click)="sortBy('PublishDate',1)">
-          Publish Date
+        <th >
+          Publish Date <img (click)="sortBy('PublishDate',1)" height=10 src="assets/sort-27.svg">
         </th>
       </ng-container>
     </tr>
