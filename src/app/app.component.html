@@ -3,6 +3,28 @@
   <p>Author's birthday - {{booksData.data.birthday}}</p>
   <p>Author's place of birth - {{booksData.data.birthPlace}}</p>
   <table>
+    <tr>
+      <th>
+        Image
+      </th>
+      <th (click)="sortBy('title',0)">
+        Title
+      </th>
+      <th (click)="sortBy('PublishDate',0)">
+        Publish Date
+      </th>
+      <ng-container *ngIf="!isMobile">
+        <th>
+          Image
+        </th>
+        <th (click)="sortBy('title',1)">
+          Title
+        </th>
+        <th (click)="sortBy('PublishDate',1)">
+          Publish Date
+        </th>
+      </ng-container>
+    </tr>
     <tr *ngFor="let book of bookList[0]; index as index ">
       <td><img [src]="book.imageUrl"></td>
       <td><a [href]="book.purchaseLink" target="_blank">{{book.title}}</a></td>
