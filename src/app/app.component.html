@@ -4,13 +4,13 @@
   <p>Author's place of birth - {{booksData.data.birthPlace}}</p>
   <table>
     <tr *ngFor="let book of bookList[0]; index as index ">
-      <td>{{book.title}}</td>
       <td><img [src]="book.imageUrl"></td>
-      <td><a [href]="book.purchaseLink" target="_blank">Purchase</a></td>
+      <td><a [href]="book.purchaseLink" target="_blank">{{book.title}}</a></td>
+      <td>{{book.PublishDate}}</td>
       <ng-container *ngIf="!isMobile">
-        <td>{{bookList[1][index].title}}{{isMobile}}</td>
         <td><img [src]="bookList[1][index].imageUrl"></td>
-        <td><a [href]="bookList[1][index].purchaseLink" target="_blank">Purchase</a></td>
+        <td><a [href]="bookList[1][index].purchaseLink" target="_blank">{{bookList[1][index].title}}</a></td>
+        <td>{{bookList[1][index].PublishDate}}</td>
       </ng-container>
     </tr>
   </table>
